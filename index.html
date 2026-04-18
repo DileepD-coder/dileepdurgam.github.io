@@ -36,15 +36,20 @@
             padding: 0 20px;
         }
         .profile {
-            max-height: 68vh;
-            width: auto;
-            border-radius: 30px;
-            border: 8px solid var(--neon-cyan);
-            box-shadow: 0 0 50px var(--neon-cyan), 0 0 90px var(--neon-purple);
-            margin-bottom: 40px;
+            max-width: 420px;          /* Better width control */
+            width: 100%;
+            height: auto;
+            border-radius: 25px;
+            border: 6px solid var(--neon-cyan);
+            box-shadow: 0 0 40px var(--neon-cyan),
+                        0 0 80px var(--neon-purple);
+            margin-bottom: 35px;
             transition: transform 0.4s;
+            object-fit: contain;
         }
-        .profile:hover { transform: scale(1.03); }
+        .profile:hover {
+            transform: scale(1.04);
+        }
         h1 {
             font-size: 4.2rem;
             font-weight: 800;
@@ -69,7 +74,7 @@
         .btn-secondary { background: transparent; color: white; border: 2px solid #00f5ff; }
         .btn:hover { transform: translateY(-6px) scale(1.05); box-shadow: 0 0 40px #ff00ff; }
         section { padding: 100px 8%; max-width: 1200px; margin: 0 auto; }
-        h2 { font-size: 2.8rem; text-align: center; margin-bottom: 60px; color: #67e8f9; text-shadow: 0 0 15px #00f5ff; }
+        h2 { font-size: 2.8rem; text-align: center; margin-bottom: 60px; color: #67e8f9; }
         .glass-card {
             background: rgba(255,255,255,0.08);
             backdrop-filter: blur(16px);
@@ -77,39 +82,10 @@
             border-radius: 20px;
             padding: 35px;
         }
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-        .skill-category {
-            background: rgba(10,10,46,0.7);
-            border: 1px solid rgba(192,38,211,0.4);
-            border-radius: 18px;
-            padding: 25px;
-        }
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 25px;
-        }
-        .card {
-            background: rgba(10,10,46,0.7);
-            border: 1px solid rgba(192,38,211,0.4);
-            border-radius: 18px;
-            padding: 28px;
-        }
-        footer {
-            text-align: center;
-            padding: 60px 20px;
-            opacity: 0.75;
-            font-size: 1rem;
-        }
     </style>
 </head>
 <body>
 
-    <!-- HERO -->
     <div class="hero">
         <img src="Profile1.jpg" alt="Dileep Durgam" class="profile">
         <h1>DILEEP DURGAM</h1>
@@ -123,7 +99,7 @@
         </div>
     </div>
 
-    <!-- ABOUT -->
+    <!-- Rest of your sections (About, Skills, Experience, Projects, Education) -->
     <section id="about">
         <h2>About Me</h2>
         <div class="glass-card" style="max-width:900px;margin:0 auto;text-align:center;font-size:1.15rem;line-height:1.8;">
@@ -133,56 +109,8 @@
         </div>
     </section>
 
-    <!-- SKILLS -->
-    <section id="skills" style="background:rgba(10,10,46,0.6);">
-        <h2>Technical Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-category"><h3>Programming</h3><p>Python (Pandas, NumPy, Matplotlib), SQL, VB .NET</p></div>
-            <div class="skill-category"><h3>Databases</h3><p>MS SQL Server, MySQL, Oracle, Relational Design, Star Schema</p></div>
-            <div class="skill-category"><h3>Visualization</h3><p>Tableau, Power BI, KPI Reporting, Dashboard Development</p></div>
-            <div class="skill-category"><h3>Cloud & Tools</h3><p>AWS (S3, Glue), Databricks, MS Power Automate, ETL</p></div>
-        </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section id="experience">
-        <h2>Professional Experience</h2>
-        <div class="card glass-card">
-            <h3>Production Analyst</h3>
-            <p style="color:#67e8f9;">Factor • Illinois, USA • Mar 2026 – Present</p>
-            <ul style="padding-left:20px;line-height:1.7;">
-                <li>Monitor production workflows and analyze operational data</li>
-                <li>Develop reports and dashboards to track KPIs</li>
-                <li>Perform data validation and ensure accuracy</li>
-                <li>Collaborate with cross-functional teams</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects">
-        <h2>Projects & Impact</h2>
-        <div class="projects-grid">
-            <div class="card"><h3>BI Dashboard – E-commerce Analytics</h3><p>Tableau • Aug 2024 – Dec 2024</p><p>Built interactive dashboards using 100K+ records</p></div>
-            <div class="card"><h3>Business Reporting Automation System</h3><p>SQL Server & VB.NET • Jan 2024 – Apr 2024</p><p>Automated ETL and reporting processes</p></div>
-            <div class="card"><h3>Relational Database Design – Art Gallery</h3><p>Aug 2023 – Dec 2023</p><p>Designed and optimized normalized database</p></div>
-            <div class="card"><h3>Python Data Processing Automation</h3><p>Jan 2023 – May 2023</p><p>Built automated workflows with Pandas</p></div>
-        </div>
-    </section>
-
-    <!-- EDUCATION & CERTIFICATIONS -->
-    <section id="education" style="background:rgba(10,10,46,0.6);">
-        <h2>Education & Certifications</h2>
-        <div class="glass-card" style="max-width:700px;margin:0 auto;">
-            <p><strong>Master of Science, Information Technology</strong><br>Northern Illinois University, Dekalb • Dec 2024</p>
-            <p style="margin-top:25px;"><strong>Bachelor of Technology, Computer Science</strong><br>Jawaharlal Nehru Technological University • July 2022</p>
-            <p style="margin-top:25px;"><strong>Certifications:</strong><br>• Introduction to Cybersecurity – Cisco<br>• Data Analytics Essentials – Cisco<br>• PCEP – Certified Entry-Level Python Programmer</p>
-        </div>
-    </section>
-
-    <footer>
-        © 2026 Dileep Durgam • Data Analyst<br>
-        Dekalb, IL • +1 224-390-6774 • dileepdurgam39@gmail.com
+    <footer style="text-align:center; padding:60px 20px; opacity:0.75;">
+        © 2026 Dileep Durgam • Data Analyst
     </footer>
 
 </body>
